@@ -1,0 +1,24 @@
+Resources:
+  MyQueue:
+    Type: AWS::SQS::Queue
+  S3JsonLoggerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: cdc-decrypt/cdc_decrypt/handler.lambda_handler
+      Runtime: python3.9
+      DeadLetterQueue:
+        Type: SQS
+        TargetArn: !GetAtt MyQueue.Arn
+      Policies:
+        - SQSSendMessagePolicy:
+            QueueName: !GetAtt MyQueue.QueueName
+        - S3NewObjectEvent:
+            Type: S3
+            Properties:
+              Bucket: !Ref AppBucket
+              Events: s3:ObjectCreated:*
+              Filter:
+                S3Key:
+                  Rules:
+                    - Name: suffix
+                      Value: ".json"

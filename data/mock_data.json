@@ -1,0 +1,47 @@
+{
+    "before": {
+      "id": "98h3b4i5-67j8-9k10-l1m2-n3o4p5q6r7s",
+      "created_at": 1631847642000,
+      "modified_at": 1699437324000,
+      "doing_business_as": "John Smith",
+      "main_activity": "Services",
+      "company_id": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p",
+      "appsource_id": "xyz123",
+      "status": "INACTIVE",
+      "revenue_level": "2",
+      "address_id": null
+    },
+    "after": {
+      "id": "98h3b4i5-67j8-9k10-l1m2-n3o4p5q6r7s",
+      "created_at": 1631847642000,
+      "modified_at": 1699437324000,
+      "doing_business_as": "John's Plumbing",
+      "main_activity": "Construction",
+      "company_id": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p",
+      "appsource_id": "abc456",
+      "status": "ACTIVE",
+      "revenue_level": "5",
+      "address_id": "98h3b4i5-67j8-9k10-l1m2-n3o4p5q6r7a"
+    },
+    "source": {
+      "version": "3.2.1.Final",
+      "connector": "postgresql",
+      "name": "smb",
+      "ts_ms": 1699437324450,
+      "snapshot": "false",
+      "db": "my_db",
+      "sequence": null,
+      "table": "business",
+      "server_id": 123456789,
+      "gtid": "78901234-5678-9012-3456-789012345678:98765432",
+      "file": "postgresql-bin.123456",
+      "pos": 98765432,
+      "row": 1,
+      "thread": null,
+      "query": null
+    },
+    "op": "u",
+    "ts_ms": 1699437324450,
+    "transaction": null
+  }
+  

@@ -1,0 +1,14 @@
+# Poetry
+.venv
+*.pyc
+__pycache__
+*.egg-info/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.pytest_cache/
+.DS_Store
+.tox/
+pyproject.toml.lock
+poetry.lock
